@@ -1,0 +1,48 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: 'montserrat';
+  background-color: #F5F5F5;
+}
+
+.first-div{
+  padding-top: 20.5px;
+  height: 650px;
+  background-image: url("assets/Group\ 54.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #B3E5DA;
+  z-index: 1;
+}
+.navbar{ 
+  padding-left: 128px;
+  padding-right: 128px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav-options{
+  display: flex;
+  gap: 31px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+}
+.curves{
+  position: absolute; /* Take the curves div out of normal flow */
+  left: 0; /* Adjust position as needed */
+  z-index: 2; /* Higher z-index to appear on top of the first-div */
+  height: auto; /* Adjust as necessary */
+  top: 531px;
+  position: relative;
+  border: 1px solid;
+  z-index: 2;
+}
+.image-1 {
+  position: absolute; 
+}
+.image-2 {
+  position: absolute; /* Overlap on top of the first image */
+}
