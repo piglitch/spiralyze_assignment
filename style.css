@@ -2,25 +2,30 @@ html, body{
   margin: 0;
   padding: 0;
   font-family: 'montserrat';
-  background-color: #F5F5F5;
+}
+
+.outer-most {
+  overflow: hidden; /* Prevents content from leaking outside */
+  position: relative; /* Ensures positioning context */
 }
 
 .first-div{
   padding-top: 20.5px;
-  height: 650px;
+  padding-left: 128px;
+  padding-right: 128px;
+  position: relative;
+  height: 629.5px;
   background-image: url("assets/Group\ 54.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   color: #B3E5DA;
-  z-index: 1;
 }
-.navbar{ 
-  padding-left: 128px;
-  padding-right: 128px;
+.navbar{
   font-size: 14px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .nav-options{
@@ -28,21 +33,64 @@ html, body{
   gap: 31px;
   margin-top: auto;
   margin-bottom: auto;
-  color: white;
+  color: white 70%;
 }
-.curves{
-  position: absolute; /* Take the curves div out of normal flow */
-  left: 0; /* Adjust position as needed */
-  z-index: 2; /* Higher z-index to appear on top of the first-div */
-  height: auto; /* Adjust as necessary */
-  top: 531px;
-  position: relative;
-  border: 1px solid;
-  z-index: 2;
-}
+
 .image-1 {
-  position: absolute; 
+  position: absolute; /* Allows precise positioning */
+  left: 0;
+  top: 539.5px;
+  width: 100%; /* Scales image width to container */
+  height: auto; /* Adjusts height to maintain aspect ratio */
+  display: block; /* Removes inline spacing for images inside containers */
+  object-fit: contain; /* Ensures the whole image is visible */
 }
 .image-2 {
   position: absolute; /* Overlap on top of the first image */
+  top: 562.5px; /* Align with the top of the container */
+  left: 0;
+  width: 100%; /* Scales image width to container */
+  height: auto; /* Adjusts height to maintain aspect ratio */
+  display: block; /* Removes inline spacing for images inside containers */
+  object-fit: contain; /* Ensures the whole image is visible */
+}
+
+.second-div{
+  padding-top: 80px;
+  padding-left: 128px;
+  padding-right: 128px;
+  background-color: #F5F5F5;
+  height: 620px;
+}
+
+.second-div-pictures{
+  display: flex;
+  gap: 36px;
+}
+
+.second-div-issues{
+  display: flex;
+  gap: 36px;
+  margin-top: 32px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font; 
+  text-decoration-skip-ink: none;
+}
+
+.second-div-successrate{
+  margin-top: 10px;
+  width: 371px;
+  height: 52px;
+  left: 941px;
+  border-radius: 4px 0px 0px 0px;
+  border: 2px 0px 0px 0px;  
+  border: 2px solid #5BC8AF;
+  text-align: center;
+}
+.second-div-rate-svg{
+  margin-top: 15px;
 }
