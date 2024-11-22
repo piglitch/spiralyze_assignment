@@ -111,6 +111,16 @@ html, body{
   box-shadow: 0px 10px 30px 0px #0000001F;
 }
 
+.client-2{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.client-3{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
 .testimonial-description{
   margin-top: -30px;
   margin-left: 36px;
@@ -235,6 +245,12 @@ html, body{
   margin-left: 976px;
   margin-top: 220px;
 }
+.play-button img{
+  transition: 0.8s ease;
+}
+.play-button img:hover{
+  scale: 1.2;
+}
 .footer-div{
   width: 1440px;
   height: 100px;
@@ -255,6 +271,14 @@ html, body{
   margin-top: 38px;
   font-size: 14px;
 }
+
+.copyright:hover{
+  color: #5BC8AF;
+}
+.privacy-policy:hover{
+  color: #5BC8AF;
+}
+
 .option:hover{
   text-decoration: underline;
   color: #FFFFFF;
@@ -272,36 +296,85 @@ html, body{
   border-radius: 12px;
   color: #FFFFFF;
   background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
+  --bg: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
 }
 .input-form{
+  position: relative;
   margin-left: 28px;
   margin-right: 28px;
   margin-top: 34px;
 }
-.input-form-1{
-  display: flex;
-  gap: 16px;
-}
-.input-form-2{
+
+.input-form-1,
+.input-form-2 {
   display: flex;
   gap: 16px;
   margin-top: 16px;
+  position: relative;
 }
-.each-input{
+
+label {
+  position: absolute; 
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+  background: var(--bg, #2A7D6C);
+  pointer-events: none;
+  margin-left: 16px;
+  margin-top: 14px;
+}
+
+#last-name + label {
+  left: calc(200px + 16px); /* Offset based on first input's width + gap */
+}
+
+#company + label {
+  left: calc(200px + 16px);
+}
+
+.each-input {
   background: none;
   outline: none;
-  border: 1px solid;
+  border: 1px solid #FFFFFF;
   color: #FFFFFF;
-  opacity: 50%;
   width: 200px;
   height: 48px;
   border-radius: 2px;
   text-align: center;
   font-size: 16px;
+  position: relative;
 }
-.each-input::placeholder{
+
+.error-message-email, .error-message-fname, .error-message-country {
+  position: absolute; 
+  margin-left: 0; 
+  margin-top: 48px; 
+  border: none;
+  z-index: 6;
+  display: none;
+}
+.error-message-comp, .error-message-lname{
+  position: absolute; 
+  margin-left: 210px;
+  margin-top: 48px; 
+  border: none;
+  z-index: 6;
+  display: none;
+}
+
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -20px; /* Move label above input */
+/* Align with input padding */
   color: #FFFFFF;
+  font-size: 13px;
 }
+
+input::placeholder {
+  opacity: 0;
+}
+
 .countries-select{
   width: 416px;
   height: 48px;
@@ -334,4 +407,11 @@ html, body{
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: 0px 4px 6px 0px #00000014;
+}
+.arrow{
+  margin-top: 80px;
+}
+.arrow:hover path{
+  fill: #5BC8AF;
 }

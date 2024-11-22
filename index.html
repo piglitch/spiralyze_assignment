@@ -32,19 +32,27 @@
             for as long as possible.
           </div>
         </div>
-        <div class="form-comp">
+        <form class="form-comp">
           <div style="display: flex;justify-content: center ;margin-top: 51px;font-size: 28px;">Contact Us</div>
           <div class="input-form">
             <div class="input-form-1">
-              <input class="each-input" type="text" placeholder="First Name">
-              <input class="each-input" type="text" placeholder="Last Name">
+              <input class="each-input" id="first-name" type="text" placeholder="First Name">
+              <label for="first-name">First Name</label>
+              <img class="error-message-fname" width="200px" src="assets/errormessage.svg" alt="">
+              <input class="each-input" id="last-name" type="text" placeholder="Last Name">
+              <label for="Last-name">Last Name</label>
+              <img class="error-message-lname" src="assets/errormessage.svg" alt="">
             </div>
             <div class="input-form-2">
-              <input class="each-input" type="text" placeholder="Business Email">
-              <input class="each-input" type="text" placeholder="Company">
+              <input class="each-input" type="text" id="business-email" placeholder="Business Email">
+              <label for="business-email">Business Email</label>   
+              <img class="error-message-email" src="assets/errormessage.svg" alt="">           
+              <input class="each-input" type="text" id="company" placeholder="Company">
+              <label for="company">Company</label>
+              <img class="error-message-comp" src="assets/errormessage.svg" alt="">
             </div>
             <div class="country-input">
-              <select name="Country" id="" class="countries-select">
+              <select id="countries-select" name="Country" id="" class="countries-select" required>
                 <option style="margin-left:16px;" value="" disabled selected>Country</option>
               </select>
             </div>
@@ -55,7 +63,7 @@
               </div>
           </div>
           </div>
-        </div>
+        </form>
       </div>
       <div class="curves">
         <img src="assets/Group 53.svg" class="image-1" alt="">
@@ -96,9 +104,13 @@
     </div>
     <div class="third-div">
       <div class="testimonials">
-        <img src="assets/arrow-left.svg" alt="">
+        <svg class="arrow" id="arrow-left" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M36.24 39.76L20.48 24L36.24 8.24L32 4L12 24L32 44L36.24 39.76Z" fill="#EAEAEA"/>
+        </svg>          
         <div class="testimonials-client">
-          <img src="assets/client.png" height="269px" width="269px" alt="">    
+          <img src="assets/client.png" height="269px" width="269px" class="client-1" alt="">    
+          <img src="assets/jack.svg" height="269px" width="269px" class="client-2" alt="">
+          <img src="assets/karen.svg" height="269px" width="269px" class="client-3" alt="">
         </div>
         <div class="testimonial-description">
           <div style="display: flex;">
@@ -109,7 +121,10 @@
               color: #FFFFFF;
               margin-top: 62px;
               "
-            > Abbie Harvey
+            > 
+            <span class="abbie">Abbie Harvey</span>
+            <span class="jack">Jack Blundell</span>
+            <span class="karen">Karen Doherty</span>
             </div>
             <div style="margin-left: auto;
               margin-right: 65px;
@@ -123,15 +138,19 @@
             </div>
           </div>  
           <div class="testimonial-description-2">
-            I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.
+            <span class="abbie-test">I have been caring for my mom & dad off and on for about 10 years now, and I know the importance of me being there for appointments. Older people need attention, love and care that they truly deserve.</span>
+            <span class="jack-test">For the past 10 years, I’ve been caring for my mom and dad, and I understand how crucial it is to be present for their appointments. Older adults truly deserve the attention, love, and care we can give them.</span>
+            <span class="karen-test">Over the last decade, I’ve cared for my parents on and off, and I’ve come to realize how important it is to attend their appointments. Elderly people genuinely deserve the love, care, and attention they need.</span>
           </div>
         </div>
-        <img src="assets/arrow-right.svg" alt="">  
+        <svg class="arrow" id="arrow-right" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.76 8.24L27.52 24L11.76 39.76L16 44L36 24L16 4L11.76 8.24Z" fill="#EAEAEA"/>
+          </svg>  
       </div>
       <div class="three-dots">
-        <div style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
-        <div style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
-        <div style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
+        <div class="dot-1" style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
+        <div class="dot-2" style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
+        <div class="dot-3" style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
       </div>
       <div class="offerings">
         <img src="assets/WE CAN ORGANIZE EVERYTHING.svg" alt="">
@@ -202,10 +221,13 @@
       <img src="assets/video-shape.svg" alt="">
     </div>
     <div class="video-section">
-      <img src="assets/vid-thumb.svg" alt="">
+      <img id="thumbnail" src="assets/stock-video-thumb.png" height="648px" width="749px"alt="">
+      <video id="my-video" width="1150" height="648" style="display: none;">
+        <source src="assets/stock-video.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="play-button">
-      <img src="assets/play-button.svg" alt="">
+      <img src="assets/play-button.svg" class="image">
     </div>
   </div>
   <div class="footer-div">
