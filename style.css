@@ -205,14 +205,133 @@ html, body{
 .checkpoint-group{
   margin-top: 48px;
   margin-left: 128px;
+  margin-bottom: 93px;
 }
 .checkpoint{
   display: flex;
   width: 430px; 
 }
+.checkmark{
+  margin-top: 5px;
+}
 .checkpoint-heading{
   color: #FFFFFF; 
   font-size: 24px; 
-  height: 32px; 
   font-weight: bold;
+  width: 430px; 
+}
+.checkpoint-desc{
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 400; 
+  line-height: 28px;
+  text-align: left;
+  color: #FFFFFF;
+  opacity: 80%;
+}
+.play-button{
+  position: absolute;
+  z-index: 2;
+  margin-left: 976px;
+  margin-top: 220px;
+}
+.footer-div{
+  width: 1440px;
+  height: 100px;
+  background: #EAEAEA;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright{
+  color: #757575;
+  margin-left: 128px;
+  margin-top: 38px;
+  font-size: 14px;
+}
+.privacy-policy{
+  color: #757575;
+  margin-right: 128px;
+  margin-top: 38px;
+  font-size: 14px;
+}
+.option:hover{
+  text-decoration: underline;
+  color: #FFFFFF;
+}
+
+.form-div{
+  display: flex;
+  gap: 109px;
+}
+.form-comp{
+  width: 472px;
+  height: 449px;
+  margin-top: 66px;
+  left: 840px;
+  border-radius: 12px;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
+}
+.input-form{
+  margin-left: 28px;
+  margin-right: 28px;
+  margin-top: 34px;
+}
+.input-form-1{
+  display: flex;
+  gap: 16px;
+}
+.input-form-2{
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+.each-input{
+  background: none;
+  outline: none;
+  border: 1px solid;
+  color: #FFFFFF;
+  opacity: 50%;
+  width: 200px;
+  height: 48px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 16px;
+}
+.each-input::placeholder{
+  color: #FFFFFF;
+}
+.countries-select{
+  width: 416px;
+  height: 48px;
+  margin-top: 16px;
+  border-radius: 2px;
+  border: 1px solid;
+  background: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  opacity: 50%;
+  padding-left: 16px;
+  padding-right: 22px;
+}
+.sbmt-btn-comp{
+  display: flex;
+  justify-content: center;
+  margin-top: 41px;
+}
+.sbmt-btn{
+  display: flex;
+  width: 221px;
+  height: 56px;
+  top: 464px;
+  border-radius: 4px;
+  opacity: 0px;
+  background: #5BC8AF;
+  color: #FFFFFF;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
