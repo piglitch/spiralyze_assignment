@@ -111,6 +111,74 @@ function dotColorChange(count){
   }
 }
 
+dotOne.addEventListener('click', () => {
+  dotOne.style.backgroundColor = '#5BC8AF';    
+    dotTwo.style.backgroundColor = '#EAEAEA';
+    dotThree.style.backgroundColor = '#EAEAEA';
+
+    clientOne.style.display = 'block';    
+    clientTwo.style.display = 'none';
+    clientThree.style.display = 'none';
+
+    abbie.style.display = 'block'
+    jack.style.display = 'none'
+    karen.style.display = 'none'
+
+    abbieTest.style.display = 'block'
+    jackTest.style.display = 'none'
+    karenTest.style.display = 'none'
+})
+dotTwo.addEventListener('click', () => {
+  dotOne.style.backgroundColor = '#EAEAEA';    
+  dotTwo.style.backgroundColor = '#5BC8AF';
+  dotThree.style.backgroundColor = '#EAEAEA';
+
+  clientOne.style.display = 'none';    
+  clientTwo.style.display = 'block';
+  clientThree.style.display = 'none';
+
+  abbie.style.display = 'none';    
+  jack.style.display = 'block';
+  karen.style.display = 'none';
+
+  abbieTest.style.display = 'none';    
+  jackTest.style.display = 'block';
+  karenTest.style.display = 'none';
+})
+dotThree.addEventListener('click', () => {
+  dotOne.style.backgroundColor = '#EAEAEA';    
+  dotTwo.style.backgroundColor = '#EAEAEA';
+  dotThree.style.backgroundColor = '#5BC8AF';
+
+  clientOne.style.display = 'none';    
+  clientTwo.style.display = 'none';
+  clientThree.style.display = 'block';
+
+  abbie.style.display = 'none';    
+  jack.style.display = 'none';
+  karen.style.display = 'block';
+
+  abbieTest.style.display = 'none';    
+  jackTest.style.display = 'none';
+  karenTest.style.display = 'block';
+})
+
+const burgerIcon = document.querySelector('.burger');
+const drawerMenu = document.getElementById('drawerMenu');
+
+burgerIcon.addEventListener('click', (event) => {
+  drawerMenu.style.top = drawerMenu.style.top === '0px' ? '-200px' : '0px';
+  event.stopPropagation(); // Prevent click from propagating to the document
+});
+
+// Close the drawer when clicking outside
+document.addEventListener('click', (event) => {
+  if (drawerMenu.style.top === '0px' && !drawerMenu.contains(event.target)) {
+    drawerMenu.style.top = '-200px';
+  }
+});
+
+
 const getCountries = async () => {
   try {
     // Fetch countries data
@@ -212,8 +280,8 @@ company.addEventListener('click', () => {
 const video = document.getElementById('my-video');
 const playButton = document.querySelector('.play-button');
 const thumbnail = document.getElementById('thumbnail')
-
 playButton.addEventListener('click', () => {
+  console.log('hi');
   thumbnail.style.display = 'none'
   video.style.display = 'block'
   if (video.paused) {
@@ -226,7 +294,6 @@ playButton.addEventListener('click', () => {
     video.play(); // Start playing again
   });
 });
-
 
 document.querySelector(".sbmt-btn").addEventListener("click", function (event) {
   event.preventDefault(); // Prevent any default behavior, like form submission.

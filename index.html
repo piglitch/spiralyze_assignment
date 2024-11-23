@@ -12,8 +12,10 @@
 <body>
   <div class="outer-most">
     <div class="first-div">
+      <img class="back-image" src="assets/Group 54.svg" alt="">
+      <img class="green-back" src="assets/greenBack.svg" alt="">
       <div class="navbar">
-        <img src="assets/Vector.svg" alt="">
+        <img class="get-an-intv-logo" src="assets/Vector.svg" alt="">
         <div class="nav-options">
           <div class="option">HOME</div>
           <div class="option">ABOUT</div>
@@ -21,11 +23,26 @@
           <div>|</div>
           <div><span style="color: white; font-weight: 500;">CALL NOW FOR A CONSULT</span> <span style="color: #5BC8AF;">123.456.7890</span></div>
         </div>
+        <img class="burger" width="20px" height="12px" src="assets/burger.svg" alt="">
+        <div id="drawerMenu" class="drawer-menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-options-768">
+          <div class="option">HOME</div>
+          <div class="option">ABOUT</div>
+          <div class="option">CONTACT</div>
+          <div><span style="color: white; font-weight: 500;">CALL NOW FOR A CONSULT</span> <span style="color: #5BC8AF;">123.456.7890</span></div>
+        </div>
       </div>
       <div class="form-div">
-        <div style="margin-top: 170.5px;">
-          <img src="assets/GET AN INTERVENTION.svg" width="574px" height="144px" alt="">
-          <div style="opacity: 80%;line-height: 24px;text-align: left;margin-top: 12px; width: 601px;height: 96px;color: #FFFFFF;font-size: 14px;">
+        <div class="get-intervention">
+          <img src="assets/GET AN INTERVENTION.svg" class="get-intervention-svg" width="574px" height="144px" alt="">
+          <img src="assets/GET AN INTERVENTION-Center.svg" class="get-intervention-svg-center" width="574px" height="144px" alt="">
+          <div class="get-intervention-sub">
             Showing greater respect to older adults can be done in several ways : <br>
             acknowledging and putting to use the talents and skills of older adults; creating 
             intergenerational initiatives; and allowing older adults to stay active and independent 
@@ -33,7 +50,7 @@
           </div>
         </div>
         <form class="form-comp">
-          <div style="display: flex;justify-content: center ;margin-top: 51px;font-size: 28px;">Contact Us</div>
+          <div class="contact-us">Contact Us</div>
           <div class="input-form">
             <div class="input-form-1">
               <input class="each-input" id="first-name" type="text" placeholder="First Name">
@@ -61,7 +78,7 @@
                 <img src="assets/plane.svg" alt="">
                 Submit
               </div>
-          </div>
+            </div>
           </div>
         </form>
       </div>
@@ -76,10 +93,7 @@
         <img src="assets/Mask Group-1.svg" alt="">
         <img src="assets/Mask Group-2.svg" alt="">
       </div>
-      <img src="assets/WE UNDERSTAND.svg" 
-        style="margin-top: 64px;"
-        width="344px" 
-        height="46px"
+      <img class="we-understand" src="assets/WE UNDERSTAND.svg" 
         alt=""
       >
       <div class="second-div-issues" >
@@ -101,6 +115,49 @@
           </div>
         </div>
       </div>
+      <div class="second-div-issues-768" >
+        <div>
+          <div style="width: 348px;line-height: 24px;font-size: 14px;text-align: left;">
+            Older adults want to play active and meaningful roles in their lives, including as part of a social network, a neighborhood, and a community. Service providers and policymakers must consider that a lack of sense of purpose can become problematic as people age.  Engaging them in leisure activities and volunteer work is important.
+          </div>
+          <div style="width: 348px;line-height: 24px;font-size:14px;margin-top:34px;text-align:left;">
+            Older adults want to stay active and contribute to society in a reciprocal manner (meaning that they want to exchange their services and skills with others for the mutual benefit of the neighborhood or community).
+          </div>
+        </div>
+        <div style="margin-left: 24px;width: 348px;">
+          <div style="line-height: 24px;font-size: 14px;text-align: left;">
+            Qualitative and quantitative studies published from 2005 to 2016 examining the social needs of older adults were eligible for inclusion.
+            To stimulate social contacts, neighborhood initiatives can be developed. Social meeting places, such as pubs and churches can help to foster the development of close and peripheral relationships.
+          </div>
+          <div class="second-div-successrate" style="margin-top:34px; width: 348px;">
+            <img src="assets/Group 5.svg" 
+              width="192px" 
+              height="28px"
+              alt=""
+              class="second-div-rate-svg"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="second-div-issues-360" >
+        <div>
+          Older adults want to play active and meaningful roles in their lives, including as part of a social network, a neighborhood, and a community. Service providers and policymakers must consider that a lack of sense of purpose can become problematic as people age.  Engaging them in leisure activities and volunteer work is important.
+        </div>
+        <div>
+          Older adults want to stay active and contribute to society in a reciprocal manner (meaning that they want to exchange their services and skills with others for the mutual benefit of the neighborhood or community). Qualitative and quantitative studies published from 2005 to 2016 examining the social needs of older adults were eligible for inclusion.
+        </div>
+        <div>
+          To stimulate social contacts, neighborhood initiatives can be developed. Social meeting places, such as pubs and churches can help to foster the development of close and peripheral relationships.
+        </div>
+        <div class="second-div-successrate">
+          <img src="assets/Group 5.svg" 
+            width="192px" 
+            height="28px"
+            alt=""
+            class="second-div-rate-svg"
+          >
+        </div>
+      </div>
     </div>
     <div class="third-div">
       <div class="testimonials">
@@ -108,32 +165,22 @@
           <path d="M36.24 39.76L20.48 24L36.24 8.24L32 4L12 24L32 44L36.24 39.76Z" fill="#EAEAEA"/>
         </svg>          
         <div class="testimonials-client">
-          <img src="assets/client.png" height="269px" width="269px" class="client-1" alt="">    
+          <img src="assets/client.png" style="display: none;" height="269px" width="269px" class="client-1" alt="">    
           <img src="assets/jack.svg" height="269px" width="269px" class="client-2" alt="">
           <img src="assets/karen.svg" height="269px" width="269px" class="client-3" alt="">
         </div>
         <div class="testimonial-description">
           <div style="display: flex;">
             <div 
-            style="
-              font-size: 24px; 
-              font-weight: bold;
-              color: #FFFFFF;
-              margin-top: 62px;
-              "
+            class="client-name"
             > 
             <span class="abbie">Abbie Harvey</span>
             <span class="jack">Jack Blundell</span>
             <span class="karen">Karen Doherty</span>
             </div>
-            <div style="margin-left: auto;
-              margin-right: 65px;
-              margin-top: 38px;
-            ">
+            <div class="quote">
               <img 
               src="assets/quote.svg" 
-              width="60px" 
-              height="47px"
               alt="">
             </div>
           </div>  
@@ -153,16 +200,30 @@
         <div class="dot-3" style="background-color: #EAEAEA;width: 16px; height: 16px; border-radius: 50%;"></div>
       </div>
       <div class="offerings">
-        <img src="assets/WE CAN ORGANIZE EVERYTHING.svg" alt="">
+        <img class="wcoe" src="assets/WE CAN ORGANIZE EVERYTHING.svg" alt="">
+        <img class="wcoe-360" src="assets/WE CAN ORGANIZE EVERYTHING-360.svg" alt="">
         <div class="offerings-description">
-          <div style="color: #333333; line-height: 24px; font-style: italic; font-size: 18px; width: 371px; height: 84px;">
-            <span style="font-weight: bold;">Interventions</span>&nbsp; should focus on older adult’s desire for connectedness, participation and independence.
+          <div class="offerings-description-1" style="height: 84px;">
+            <span style="font-size: 18px;"><span style="font-weight: bold;">Interventions</span>&nbsp; should focus on older adult’s desire for connectedness, participation and independence.</span>
           </div>
-          <div style="color: #333333; line-height: 24px; font-size: 14px; width: 371px; height: 168px;">
+          <div class="offerings-description-1" >
             Loneliness and social isolation are growing public health concerns in our aging society. Whilst these experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and one-third will experience some degree of loneliness later in life. It is vital to reduce loneliness and social isolation among older adults.
           </div>
-          <div style="color: #333333; line-height: 24px; font-size: 14px; width: 371px; height: 168px;">
+          <div class="offerings-description-1" style="color: #333333; line-height: 24px; font-size: 14px; width: 371px; height: 168px;">
             The methodology framework proposed by Asked and O’Malley and further developed by Levac, et al. was used to guide the scoping review process. A total of 33 reviews met the inclusion criteria, evaluating a range of interventions targeted at older people residing in the community or institutionalised settings. 
+          </div>
+        </div>
+        <div class="offerings-description-768">
+          <div style="margin-top: 32px; color: #333333; line-height: 24px; font-style: italic; font-size: 18px; width: 720px; height: 56px;">
+            <span style="font-weight: bold;">Interventions</span>&nbsp; should focus on older adult’s desire for connectedness, participation and independence.
+          </div>
+          <div style="display: flex; margin-top: 32px; gap: 24px;">
+            <div style="color: #333333; line-height: 24px; font-size: 14px; width: 348px; height: 192px;">
+              Loneliness and social isolation are growing public health concerns in our aging society. Whilst these experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and one-third will experience some degree of loneliness later in life. It is vital to reduce loneliness and social isolation among older adults.
+            </div>
+            <div style="color: #333333; line-height: 24px; font-size: 14px; width: 348px; height: 192px;">
+              The methodology framework proposed by Asked and O’Malley and further developed by Levac, et al. was used to guide the scoping review process. A total of 33 reviews met the inclusion criteria, evaluating a range of interventions targeted at older people residing in the community or institutionalised settings. 
+            </div>
           </div>
         </div>
         <div class="offerings-description-2">
@@ -190,8 +251,9 @@
 
   <div class="fourth-div">
     <div class="description">
-      <div style="margin-top: 94px; margin-left: 128px;">
-        <img src="assets/WATCH THE VIDEO.svg" width="444px" height="52px" alt="">
+      <div class="description-wtv">
+        <img class="wtv-logo" src="assets/WATCH THE VIDEO.svg" >
+        <img class="wtv-logo-360" src="assets/WATCH THE VIDEO-360.svg" alt="">
       </div>
       <div class="checkpoint-group">
         <div class="checkpoint">
@@ -218,7 +280,8 @@
       </div>
     </div>
     <div class="vid-desc-shape">
-      <img src="assets/video-shape.svg" alt="">
+      <img class="video-shape" src="assets/video-shape.svg" alt="">
+      <img class="video-shape-768" src="assets/video-shape-768.svg" alt="">
     </div>
     <div class="video-section">
       <img id="thumbnail" src="assets/stock-video-thumb.png" height="648px" width="749px"alt="">
@@ -230,6 +293,50 @@
       <img src="assets/play-button.svg" class="image">
     </div>
   </div>
+
+  <!-- <div class="fourth-div-768">
+    <div class="description">
+      <div class="description-wtv">
+        <img src="assets/WATCH THE VIDEO.svg" alt="">
+      </div>
+      <div class="checkpoint-group">
+        <div class="checkpoint">
+          <div class="checkmark"><img src="assets/Checkmark.svg" alt=""></div>
+          <div style="margin-left: 24.5px;">
+            <div class="checkpoint-heading">Needs Assessment</div>
+            <div class="checkpoint-desc">The Advocacy Evaluation Toolkit contains the instruments used to collect data for evaluating the Consumer Voices for Coverage program. </div>
+          </div>
+        </div>
+        <div class="checkpoint" style="margin-top: 22px;">
+          <div class="checkmark"><img src="assets/Checkmark.svg" alt=""></div>
+          <div style="margin-left: 24.5px;">
+            <div class="checkpoint-heading">Insurance Advocacy</div>
+            <div class="checkpoint-desc">We are committed to advocating for appropriate coverage and payment policies.</div>
+          </div>
+        </div>
+        <div class="checkpoint" style="margin-top: 22px;">
+          <div class="checkmark"><img src="assets/Checkmark.svg" alt=""></div>
+          <div style="margin-left: 24.5px;">
+            <div class="checkpoint-heading">Treatment Planning & Placement</div>
+            <div class="checkpoint-desc">Patients can better understand medical procedures, discharge instructions, etc.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vid-desc-shape">
+      <img src="assets/video-shape-768.svg" alt="">
+    </div>
+    <div class="video-section">
+      <img id="thumbnail" src="assets/stock-video-thumb.png" height="500px" width="768px"alt="">
+      <video id="my-video" width="768" height="500" style="display: none;">
+        <source src="assets/stock-video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="play-button">
+      <img src="assets/play-button.svg" class="image">
+    </div>
+  </div> -->
+
   <div class="footer-div">
     <div class="copyright">
       @2021 Get an Intervention Inc. All rights reserved.
