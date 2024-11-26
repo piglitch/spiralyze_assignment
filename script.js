@@ -5,43 +5,57 @@ const dotTwo = document.querySelector('.dot-2')
 const dotThree = document.querySelector('.dot-3')
 dotOne.style.backgroundColor = '#5BC8AF'
 
-const clientOne = document.querySelector('.client-1')
-const clientTwo = document.querySelector('.client-2')
-const clientThree = document.querySelector('.client-3')
-clientOne.style.display = 'block'
-clientTwo.style.display = 'none'
-clientThree.style.display = 'none'
+// const clientOne = document.querySelector('.client-1')
+// const clientTwo = document.querySelector('.client-2')
+// const clientThree = document.querySelector('.client-3')
+// clientOne.style.display = 'block'
+// clientTwo.style.display = 'none'
+// clientThree.style.display = 'none'
 
-const abbie = document.querySelector('.abbie')
-const jack = document.querySelector('.jack')
-const karen = document.querySelector('.karen')
-abbie.style.display = 'block'
-jack.style.display = 'none'
-karen.style.display = 'none'
+// const abbie = document.querySelector('.abbie')
+// const jack = document.querySelector('.jack')
+// const karen = document.querySelector('.karen')
+// abbie.style.display = 'block'
+// jack.style.display = 'none'
+// karen.style.display = 'none'
 
-const abbieTest = document.querySelector('.abbie-test')
-const jackTest = document.querySelector('.jack-test')
-const karenTest = document.querySelector('.karen-test')
-abbieTest.style.display = 'block'
-jackTest.style.display = 'none'
-karenTest.style.display = 'none'
+// const abbieTest = document.querySelector('.abbie-test')
+// const jackTest = document.querySelector('.jack-test')
+// const karenTest = document.querySelector('.karen-test')
+// abbieTest.style.display = 'block'
+// jackTest.style.display = 'none'
+// karenTest.style.display = 'none'
 
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
 const businessEmail = document.getElementById("business-email");
 const company = document.getElementById("company");
 
+function updateCarouselNext(count, tempCount){
+  const diff = Math.abs(count-tempCount) * 100/3
+  const carousel = document.querySelector('.testimonial-carousel')
+  carousel.style.transform = `translateX(-${diff}%)` 
+}
+function updateCarouselPrev(count, tempCount){
+  const diff = Math.abs(count-tempCount) * 100/3
+  const carousel = document.querySelector('.testimonial-carousel')
+  carousel.style.transform = `translateX(${diff}%)`
+}
+let prevCount = 0;
 const prevButton = document.getElementById("arrow-left");
 prevButton.addEventListener("click", () => {
+  prevCount = count
   if (count < 1) {
     count = 2
     dotColorChange(count)
-    console.log(count);
+    console.log(count, prevCount);
+    updateCarouselNext(count, prevCount)
     return;
   }
   count--
   dotColorChange(count)
   console.log(count);
+  updateCarouselPrev(count, prevCount)
 })
 
 const nextButton = document.getElementById("arrow-right");
@@ -50,11 +64,13 @@ nextButton.addEventListener("click", () => {
     count = 0
     dotColorChange(count)
     console.log(count);
+    updateCarouselPrev(count, prevCount)
     return;
   }
   count++
   dotColorChange(count)
   console.log(count);
+  updateCarouselNext(count, prevCount)
 })
 
 function dotColorChange(count){
@@ -63,51 +79,51 @@ function dotColorChange(count){
     dotTwo.style.backgroundColor = '#EAEAEA';
     dotThree.style.backgroundColor = '#EAEAEA';
 
-    clientOne.style.display = 'block';    
-    clientTwo.style.display = 'none';
-    clientThree.style.display = 'none';
+    // clientOne.style.display = 'block';    
+    // clientTwo.style.display = 'none';
+    // clientThree.style.display = 'none';
 
-    abbie.style.display = 'block'
-    jack.style.display = 'none'
-    karen.style.display = 'none'
+    // abbie.style.display = 'block'
+    // jack.style.display = 'none'
+    // karen.style.display = 'none'
 
-    abbieTest.style.display = 'block'
-    jackTest.style.display = 'none'
-    karenTest.style.display = 'none'
+    // abbieTest.style.display = 'block'
+    // jackTest.style.display = 'none'
+    // karenTest.style.display = 'none'
   }
   if (count === 1) {
     dotOne.style.backgroundColor = '#EAEAEA';    
     dotTwo.style.backgroundColor = '#5BC8AF';
     dotThree.style.backgroundColor = '#EAEAEA';
 
-    clientOne.style.display = 'none';    
-    clientTwo.style.display = 'block';
-    clientThree.style.display = 'none';
+    // clientOne.style.display = 'none';    
+    // clientTwo.style.display = 'block';
+    // clientThree.style.display = 'none';
 
-    abbie.style.display = 'none';    
-    jack.style.display = 'block';
-    karen.style.display = 'none';
+    // abbie.style.display = 'none';    
+    // jack.style.display = 'block';
+    // karen.style.display = 'none';
 
-    abbieTest.style.display = 'none';    
-    jackTest.style.display = 'block';
-    karenTest.style.display = 'none';
+    // abbieTest.style.display = 'none';    
+    // jackTest.style.display = 'block';
+    // karenTest.style.display = 'none';
   }
   if (count === 2) {
     dotOne.style.backgroundColor = '#EAEAEA';    
     dotTwo.style.backgroundColor = '#EAEAEA';
     dotThree.style.backgroundColor = '#5BC8AF';
 
-    clientOne.style.display = 'none';    
-    clientTwo.style.display = 'none';
-    clientThree.style.display = 'block';
+    // clientOne.style.display = 'none';    
+    // clientTwo.style.display = 'none';
+    // clientThree.style.display = 'block';
 
-    abbie.style.display = 'none';    
-    jack.style.display = 'none';
-    karen.style.display = 'block';
+    // abbie.style.display = 'none';    
+    // jack.style.display = 'none';
+    // karen.style.display = 'block';
 
-    abbieTest.style.display = 'none';    
-    jackTest.style.display = 'none';
-    karenTest.style.display = 'block';
+    // abbieTest.style.display = 'none';    
+    // jackTest.style.display = 'none';
+    // karenTest.style.display = 'block';
   }
 }
 
