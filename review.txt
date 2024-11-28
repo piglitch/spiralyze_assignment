@@ -1,0 +1,6 @@
+Please review:
+
+[ ] Section 1 - (Contact Us: submits without @ email, transition line) 
+[X] Review We Understand section - (success rate hover movement, testimonial carousel movement) 
+[X] Review We Can Organize Everything section - (hover box text)
+[X] Watch The Video - (video should pop up)

@@ -31,31 +31,26 @@ const lastName = document.getElementById("last-name");
 const businessEmail = document.getElementById("business-email");
 const company = document.getElementById("company");
 
-function updateCarouselNext(count, tempCount){
-  const diff = Math.abs(count-tempCount) * 100/3
+function updateCarousel(count){
+  const diff = Math.abs(count) * 33.33
+  console.log('next: ',diff);
   const carousel = document.querySelector('.testimonial-carousel')
   carousel.style.transform = `translateX(-${diff}%)` 
 }
-function updateCarouselPrev(count, tempCount){
-  const diff = Math.abs(count-tempCount) * 100/3
-  const carousel = document.querySelector('.testimonial-carousel')
-  carousel.style.transform = `translateX(${diff}%)`
-}
-let prevCount = 0;
+
 const prevButton = document.getElementById("arrow-left");
 prevButton.addEventListener("click", () => {
-  prevCount = count
   if (count < 1) {
     count = 2
     dotColorChange(count)
-    console.log(count, prevCount);
-    updateCarouselNext(count, prevCount)
+    console.log(count);
+    updateCarousel(count)
     return;
   }
   count--
   dotColorChange(count)
   console.log(count);
-  updateCarouselPrev(count, prevCount)
+  updateCarousel(count)
 })
 
 const nextButton = document.getElementById("arrow-right");
@@ -64,13 +59,13 @@ nextButton.addEventListener("click", () => {
     count = 0
     dotColorChange(count)
     console.log(count);
-    updateCarouselPrev(count, prevCount)
+    updateCarousel(count)
     return;
   }
   count++
   dotColorChange(count)
   console.log(count);
-  updateCarouselNext(count, prevCount)
+  updateCarousel(count)
 })
 
 function dotColorChange(count){
@@ -78,52 +73,16 @@ function dotColorChange(count){
     dotOne.style.backgroundColor = '#5BC8AF';    
     dotTwo.style.backgroundColor = '#EAEAEA';
     dotThree.style.backgroundColor = '#EAEAEA';
-
-    // clientOne.style.display = 'block';    
-    // clientTwo.style.display = 'none';
-    // clientThree.style.display = 'none';
-
-    // abbie.style.display = 'block'
-    // jack.style.display = 'none'
-    // karen.style.display = 'none'
-
-    // abbieTest.style.display = 'block'
-    // jackTest.style.display = 'none'
-    // karenTest.style.display = 'none'
   }
   if (count === 1) {
     dotOne.style.backgroundColor = '#EAEAEA';    
     dotTwo.style.backgroundColor = '#5BC8AF';
     dotThree.style.backgroundColor = '#EAEAEA';
-
-    // clientOne.style.display = 'none';    
-    // clientTwo.style.display = 'block';
-    // clientThree.style.display = 'none';
-
-    // abbie.style.display = 'none';    
-    // jack.style.display = 'block';
-    // karen.style.display = 'none';
-
-    // abbieTest.style.display = 'none';    
-    // jackTest.style.display = 'block';
-    // karenTest.style.display = 'none';
   }
   if (count === 2) {
     dotOne.style.backgroundColor = '#EAEAEA';    
     dotTwo.style.backgroundColor = '#EAEAEA';
     dotThree.style.backgroundColor = '#5BC8AF';
-
-    // clientOne.style.display = 'none';    
-    // clientTwo.style.display = 'none';
-    // clientThree.style.display = 'block';
-
-    // abbie.style.display = 'none';    
-    // jack.style.display = 'none';
-    // karen.style.display = 'block';
-
-    // abbieTest.style.display = 'none';    
-    // jackTest.style.display = 'none';
-    // karenTest.style.display = 'block';
   }
 }
 
@@ -132,51 +91,21 @@ dotOne.addEventListener('click', () => {
     dotTwo.style.backgroundColor = '#EAEAEA';
     dotThree.style.backgroundColor = '#EAEAEA';
 
-    clientOne.style.display = 'block';    
-    clientTwo.style.display = 'none';
-    clientThree.style.display = 'none';
-
-    abbie.style.display = 'block'
-    jack.style.display = 'none'
-    karen.style.display = 'none'
-
-    abbieTest.style.display = 'block'
-    jackTest.style.display = 'none'
-    karenTest.style.display = 'none'
+    updateCarousel(0);
 })
 dotTwo.addEventListener('click', () => {
   dotOne.style.backgroundColor = '#EAEAEA';    
   dotTwo.style.backgroundColor = '#5BC8AF';
   dotThree.style.backgroundColor = '#EAEAEA';
 
-  clientOne.style.display = 'none';    
-  clientTwo.style.display = 'block';
-  clientThree.style.display = 'none';
-
-  abbie.style.display = 'none';    
-  jack.style.display = 'block';
-  karen.style.display = 'none';
-
-  abbieTest.style.display = 'none';    
-  jackTest.style.display = 'block';
-  karenTest.style.display = 'none';
+  updateCarousel(1);
 })
 dotThree.addEventListener('click', () => {
   dotOne.style.backgroundColor = '#EAEAEA';    
   dotTwo.style.backgroundColor = '#EAEAEA';
   dotThree.style.backgroundColor = '#5BC8AF';
 
-  clientOne.style.display = 'none';    
-  clientTwo.style.display = 'none';
-  clientThree.style.display = 'block';
-
-  abbie.style.display = 'none';    
-  jack.style.display = 'none';
-  karen.style.display = 'block';
-
-  abbieTest.style.display = 'none';    
-  jackTest.style.display = 'none';
-  karenTest.style.display = 'block';
+  updateCarousel(2);
 })
 
 const burgerIcon = document.querySelector('.burger');
@@ -295,11 +224,32 @@ company.addEventListener('click', () => {
 
 const video = document.getElementById('my-video');
 const playButton = document.querySelector('.play-button');
-const thumbnail = document.getElementById('thumbnail')
+const thumbnail = document.getElementById('thumbnail');
+const descShape = document.querySelector('.vid-desc-shape');
+const description = document.querySelector('.description');
+const vidDiv = document.querySelector('.my-video');
+const fourthDiv = document.querySelector('.fourth-div');
+
+const cancel = document.querySelector('.cancel-ico');
+cancel.addEventListener("click", () => {
+  video.pause();
+  thumbnail.style.display = 'block'
+  descShape.style.display = 'block'
+  description.style.display = 'block'
+  video.style.display = 'none'//
+  playButton.style.display = 'block'
+  vidDiv.style.display = 'none'//
+  // fourthDiv.style.height = 'max-content'
+})
+
 playButton.addEventListener('click', () => {
-  console.log('hi');
   thumbnail.style.display = 'none'
+  descShape.style.display = 'none'
+  description.style.display = 'none'
   video.style.display = 'block'
+  playButton.style.display = 'none'
+  vidDiv.style.display = 'block'
+  // fourthDiv.style.height = 'max-content'
   if (video.paused) {
     video.play();
   } else{
@@ -331,7 +281,7 @@ document.querySelector(".sbmt-btn").addEventListener("click", function (event) {
     } else{
       hideError("error-message-lname")
     }
-    if (!businessEmail.value.trim()) {
+    if (!businessEmail.value.trim() || !businessEmail.checkValidity()) {
       showError("error-message-email")
       isValid = false;
     } else{
@@ -346,10 +296,6 @@ document.querySelector(".sbmt-btn").addEventListener("click", function (event) {
     function showError(classID) {
       const errorElement = document.querySelector(`.${classID}`);
       errorElement.style.display = "block";
-    }
-    function hideError(classID) {
-      const errorElement = document.querySelector(`.${classID}`);
-      errorElement.style.display = "none";
     }
   // Redirect to a new page or dynamically display a success message
   
